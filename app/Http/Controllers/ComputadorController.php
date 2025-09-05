@@ -35,32 +35,34 @@ class ComputadorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Computador $computador)
+    public function show(Computador $computadore)
     {
-        //
+        return view('computador.show')->with('objetoComputador', $computadore);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Computador $computador)
+    public function edit(Computador $computadore)
     {
-        //
+        return view('computador.edit')->with('objetoComputador', $computadore);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Computador $computador)
+    public function update(Request $request, Computador $computadore)
     {
-        //
+        $computadore->update($request->all());
+        return redirect('/computadores');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Computador $computador)
+    public function destroy(Computador $computadore)
     {
-        //
+        $computadore->delete();
+        return redirect('/computadores');
     }
 }

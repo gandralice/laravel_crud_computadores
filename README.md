@@ -46,5 +46,3 @@ Projeto de estudo para criar um sistema de cadastro de computadores.
     ```bash
     php artisan serve
     ```
-
-7.  **Acesse a aplicação em:** [http://127.0.0.1:8000/computadores](http://127.0.0.1:8000/computadores)
