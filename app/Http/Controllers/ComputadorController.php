@@ -21,7 +21,7 @@ class ComputadorController extends Controller
      */
     public function create()
     {
-        //
+        return view('computador.create');
     }
 
     /**
@@ -29,7 +29,8 @@ class ComputadorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Computador::create($request->all());
+        return redirect('/computadores');
     }
 
     /**
